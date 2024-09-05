@@ -31,9 +31,19 @@
                     </ul>
                 </div>
                 <div id="header">
-                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Index">Account Home</a>
-                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
-                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Index">Account Home</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="SignOut">Sign Out</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Profile">Profile Information</a>
+                    }
+
+                    else
+                    {
+                        <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="SignIn">Sign In</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                    }
+                    
                 </div>
             </div>
         </nav>

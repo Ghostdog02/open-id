@@ -17,7 +17,7 @@ namespace OpenID.Controllers
             return View();
         }
 
-        public IActionResult Login()
+        public IActionResult SignIn()
         {
             return Challenge(new AuthenticationProperties { RedirectUri = "https://localhost:7201/Account" },
                 OpenIdConnectDefaults.AuthenticationScheme);
@@ -31,6 +31,12 @@ namespace OpenID.Controllers
 
         
         public IActionResult Register()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult SignOut()
         {
             return View();
         }

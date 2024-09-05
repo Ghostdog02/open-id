@@ -68,3 +68,4 @@ D:\Projects\OpenID\obj\Debug\net8.0\refint\OpenID.dll
 D:\Projects\OpenID\obj\Debug\net8.0\OpenID.pdb
 D:\Projects\OpenID\obj\Debug\net8.0\OpenID.genruntimeconfig.cache
 D:\Projects\OpenID\obj\Debug\net8.0\ref\OpenID.dll
+D:\Projects\OpenID\obj\Debug\net8.0\OpenID.sourcelink.json
